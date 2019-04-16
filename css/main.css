@@ -3,7 +3,26 @@
 /* tags */
 body {
   background-color: #34314f;
+  margin: 0;
 }
 /* classes */
+.titlebar {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #34314f;
+  box-shadow: 0vw 0.25vh 20px black;
+}
 
+.titlebar > h1 {
+  color: white;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  line-height: 2em;
+  margin: auto;
+  height: 2em;
+}
 /* ids */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Exo:900|Lato');
