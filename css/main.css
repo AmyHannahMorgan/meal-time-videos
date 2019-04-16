@@ -17,7 +17,7 @@ body {
   color: white;
   font-family: 'Exo', sans-serif;
   text-align: center;
-  font-size: 5vh;
+  font-size: 5vw;
   line-height: 2em;
   margin: auto;
   height: 2em;
@@ -28,7 +28,8 @@ body {
 }
 
 .videocontainer {
-
+  height: auto;
+  max-height: 100000in;
 }
 
 .videocontainertitle{
@@ -41,9 +42,34 @@ body {
   color: white;
   font-family: 'Exo', sans-serif;
   text-align: center;
-  font-size: 3vh
+  font-size: 3vw;
+  line-height: 1.5em;
+
+  height: 1.5em;
+}
+
+.videobox {
+  display: flex;
+  position: relative;
+  top: -1.5vh;
+
+  height: 10vh;
+  min-height: 100px;
+  width: 75vw;
+
+  background-color: #5D5A72;
+  margin: 5px auto 0 auto;
+
+  border: thin solid transparent;
+  border-radius: 10px;
+}
+
+.videobox > .thumbnail {
+  min-width: 89px;
 }
 /* ids */
+
+/* media queries */
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Exo:900|Lato');
