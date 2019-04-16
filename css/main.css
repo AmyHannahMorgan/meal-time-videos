@@ -7,17 +7,17 @@ body {
 }
 /* classes */
 .titlebar {
-  display: flex;
   width: 100%;
   height: auto;
   background-color: #34314f;
-  box-shadow: 0vw 0.25vh 20px black;
+  box-shadow: 0vw 0.25vh 20px #221122;
 }
 
 .titlebar > h1 {
   color: white;
   font-family: 'Exo', sans-serif;
   text-align: center;
+  font-size: 5vh;
   line-height: 2em;
   margin: auto;
   height: 2em;
