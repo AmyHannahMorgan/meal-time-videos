@@ -5,15 +5,8 @@ body {
   background-color: #34314f;
   margin: 0;
 }
-/* classes */
-.titlebar {
-  width: 100%;
-  height: auto;
-  background-color: #34314f;
-  box-shadow: 0vw 0.25vh 20px #221122;
-}
 
-.titlebar > h1 {
+h1 {
   color: white;
   font-family: 'Exo', sans-serif;
   text-align: center;
@@ -21,6 +14,29 @@ body {
   line-height: 2em;
   margin: auto;
   height: 2em;
+}
+
+h2 {
+  color: white;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  font-size: 3vw;
+  line-height: 1.5em;
+
+  height: 1.5em;
+}
+
+h3 {
+  font-family: 'Exo', sans-serif;
+  font-size: 2vw
+}
+
+/* classes */
+.titlebar {
+  width: 100%;
+  height: auto;
+  background-color: #34314f;
+  box-shadow: 0vw 0.25vh 20px #221122;
 }
 
 .bodycontainer {
@@ -38,16 +54,6 @@ body {
   box-shadow: 0px 5px 10px -5px #221122;
 }
 
-.videocontainertitle > h2 {
-  color: white;
-  font-family: 'Exo', sans-serif;
-  text-align: center;
-  font-size: 3vw;
-  line-height: 1.5em;
-
-  height: 1.5em;
-}
-
 .videobox {
   display: flex;
   position: relative;
@@ -56,6 +62,7 @@ body {
   height: 10vh;
   min-height: 100px;
   width: 75vw;
+  min-width: 548px;
   margin: 0;
 
   background-color: #5D5A72;
@@ -67,7 +74,7 @@ body {
 
 .videobox > .thumbnail {
   min-width: 89px;
-  width: 18vh;
+  width: 25%;
   height: 100%;
 
   display: flex;
@@ -76,6 +83,13 @@ body {
 }
 
 .videobox > .videoinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 75%;
+  height: 100%;
+
   color: white;
 }
 
@@ -83,9 +97,13 @@ body {
   margin: 0;
 }
 
-.videoinfo > h3 {
-  font-family: 'Exo', sans-serif;
-  font-size: 2vw
+.videoinfo > .ratingbar {
+  display: flex;
+  min-height: 25px;
+  height: 2.5vh;
+  width: 100%;
+
+  background-image: linear-gradient(to right, #9494FF 20%, #FF8b60 20%, #FF8b60 100%);
 }
 
 .thumbnail > img {
@@ -96,8 +114,23 @@ body {
   width: 13vh;
 }
 /* ids */
+#videoboxtemplate {
+  display: none;
+}
 
 /* media queries */
+@media only screen and (max-width: 670px) {
+  body h1 {
+    font-size: 34px;
+  }
 
+  body h2 {
+    font-size: 20px;
+  }
+
+  body h3 {
+    font-size: 13px;
+  }
+}
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Exo:900|Lato');
