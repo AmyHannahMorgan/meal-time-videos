@@ -101,7 +101,7 @@ h3 {
 .videoinfo > .ratingbar {
   display: flex;
   min-height: 10px;
-  height: 2.5vh;
+  height: 10%;
   width: 100%;
 
   background-image: linear-gradient(to right, #9494FF 20%, #FF8b60 20%, #FF8b60 100%);
