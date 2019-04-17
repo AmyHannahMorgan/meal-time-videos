@@ -62,6 +62,7 @@ h3 {
   height: 10vh;
   min-height: 100px;
   width: 75vw;
+  max-width: 825px;
   min-width: 548px;
   margin: 0;
 
@@ -75,6 +76,7 @@ h3 {
 .videobox > .thumbnail {
   min-width: 89px;
   width: 25%;
+  max-width: 170px;
   height: 100%;
 
   display: flex;
@@ -120,16 +122,30 @@ h3 {
 
 /* media queries */
 @media only screen and (max-width: 670px) {
-  body h1 {
+  .titlebar > h1 {
     font-size: 34px;
   }
 
-  body h2 {
+  .videocontainertitle > h2 {
     font-size: 20px;
   }
 
-  body h3 {
+  .videoinfo > h3 {
     font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .titlebar > h1 {
+    font-size: 45px;
+  }
+
+  .videocontainertitle > h2 {
+    font-size: 27px;
+  }
+
+  .videoinfo > h3 {
+    font-size: 18px;
   }
 }
 /* fonts */
