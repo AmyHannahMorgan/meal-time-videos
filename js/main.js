@@ -82,14 +82,18 @@ function loadVideos(redditPosts) {
     }
   }
   console.log(videos);
-  createVideoBoxes();
+  createVideoBoxes(fiveToSeven, videos.fiveToSeven);
+  createVideoBoxes(sevenToTen, videos.sevenToTen);
+  createVideoBoxes(tenToFifthteen, videos.tenToFifthteen);
+  createVideoBoxes(fifthteenToThirty, videos.fifthteenToThirty);
+  createVideoBoxes(thirtyPlus, videos.thirtyPlus);
 }
 
-function createVideoBoxes(){
-  for (let i = 0; i < videos.fiveToSeven.length; i++) {
+function createVideoBoxes(videoCategory, videoList){
+  for (let i = 0; i < videoList.length; i++) {
     let clone = videoBoxTemplate.cloneNode(true)
     clone.id = '';
-    let element = fiveToSeven.appendChild(clone);
-    videoBoxes.push(new VideoBoxObject(element, videos.fiveToSeven[i]));
+    let element = videoCategory.appendChild(clone);
+    videoBoxes.push(new VideoBoxObject(element, videoList[i]));
   }
 }
