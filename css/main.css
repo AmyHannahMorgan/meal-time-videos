@@ -108,6 +108,22 @@ h3 {
   background-image: linear-gradient(to right, #9494FF 20%, #FF8b60 20%, #FF8b60 100%);
 }
 
+.ratingbar > .downPercent {
+  background-color: #9494FF;
+
+  display: flex;
+  height: 100%;
+  width: 20%;
+}
+
+.ratingbar > .upPercent {
+  background-color: #FF8b60;
+
+  display: flex;
+  height: 100%;
+  width: 80%;
+}
+
 .thumbnail > img {
   object-fit: cover;
   min-height: 75px;

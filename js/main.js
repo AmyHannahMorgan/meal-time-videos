@@ -10,12 +10,34 @@ videos = {
   tenToFifthteen: [],
   fifthteenToThirty: [],
   thirtyPlus:[]
-};
+},
+videoBoxes = [];
 
 getRedditPosts();
 
 function VideoBoxObject(element, postData){
   this.element = element;
+
+  this.element.addEventListener('click',  () => {
+    window.location.href = postData.url
+  });
+
+  this.element.querySelector('.thumbnail').querySelector('img').src = postData.secure_media.oembed.thumbnail_url;
+
+  this.videoInfo = this.element.querySelector('.videoinfo');
+
+  this.videoInfo.querySelector('.videotitle').innerHTML = postData.secure_media.oembed.title
+
+  let perVotePercent = 100 / (postData.ups + postData.downs),
+  downPercent = postData.downs * perVotePercent;
+
+  console.log(perVotePercent, downPercent);
+
+  this.ratingBar = this.videoInfo.querySelector('.ratingbar');
+  console.log(this.videoInfo);
+  console.log(this.ratingBar);
+  this.ratingBar.querySelector('.downPercent').style.width = downPercent + '%';
+  this.ratingBar.querySelector('.upPercent').style.width = (100 - downPercent) + '%';
 }
 
 function getRedditPosts(){
@@ -60,4 +82,14 @@ function loadVideos(redditPosts) {
     }
   }
   console.log(videos);
+  createVideoBoxes();
+}
+
+function createVideoBoxes(){
+  for (let i = 0; i < videos.fiveToSeven.length; i++) {
+    let clone = videoBoxTemplate.cloneNode(true)
+    clone.id = '';
+    let element = fiveToSeven.appendChild(clone);
+    videoBoxes.push(new VideoBoxObject(element, videos.fiveToSeven[i]));
+  }
 }
